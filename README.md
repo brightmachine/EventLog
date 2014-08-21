@@ -1,0 +1,4 @@
+EventLog
+========
+
+Event sourcing persistence
