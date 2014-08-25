@@ -1,0 +1,27 @@
+{
+    "name": "brightmachine/eventlog",
+    "description": "",
+    "keywords": [],
+    "homepage": "https://github.com/brightmachine/eventlog",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.5.0",
+        "beberlei/assert": "~2.0@dev",
+        "rhumsaa/uuid": "~2.7"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "1.*",
+        "phpunit/phpunit": "4.2.*",
+        "mockery/mockery": ">=0.9.1",
+        "d11wtq/boris": "1.*",
+        "phpspec/phpspec": "2.1.*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "EventLog\\": "src/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}

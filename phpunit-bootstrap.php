@@ -1,0 +1,28 @@
+<?php
+// For composer
+require_once 'vendor/autoload.php';
+
+/**
+ * You can overwrite BRIGHTMACHINE_EVENTLOG_TEST_DB_* by `export` command.
+ * @see http://manpages.ubuntu.com/manpages/hardy/man5/exports.5.html
+ *
+ * Example:
+ *
+ * ```
+ * export BRIGHTMACHINE_EVENTLOG_TEST_DB_USER=alice
+ * export BRIGHTMACHINE_EVENTLOG_TEST_DB_PASS=passwd
+ * phpunit
+ * ```
+ */
+if ( isset($_SERVER['BRIGHTMACHINE_EVENTLOG_TEST_DB_HOST']) === false ) {
+    $_SERVER['BRIGHTMACHINE_EVENTLOG_TEST_DB_HOST'] = $_SERVER['BRIGHTMACHINE_EVENTLOG_TEST_DB_HOST_DEFAULT'];
+}
+if ( isset($_SERVER['BRIGHTMACHINE_EVENTLOG_TEST_DB_NAME']) === false ) {
+    $_SERVER['BRIGHTMACHINE_EVENTLOG_TEST_DB_NAME'] = $_SERVER['BRIGHTMACHINE_EVENTLOG_TEST_DB_NAME_DEFAULT'];
+}
+if ( isset($_SERVER['BRIGHTMACHINE_EVENTLOG_TEST_DB_USER']) === false ) {
+    $_SERVER['BRIGHTMACHINE_EVENTLOG_TEST_DB_USER'] = $_SERVER['BRIGHTMACHINE_EVENTLOG_TEST_DB_USER_DEFAULT'];
+}
+if ( isset($_SERVER['BRIGHTMACHINE_EVENTLOG_TEST_DB_PASS']) === false ) {
+    $_SERVER['BRIGHTMACHINE_EVENTLOG_TEST_DB_PASS'] = $_SERVER['BRIGHTMACHINE_EVENTLOG_TEST_DB_PASS_DEFAULT'];
+}
